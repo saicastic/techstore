@@ -13,8 +13,8 @@
 ## STEP 1 - Install Dependencies and DevDependencies :
 
 - Now we will download all the dependencies and devdependencies which are required for our project.
-  `npm i bcryptjs multer clodinary dotenv mongoose cors cookie-parser jsonwebtoken stripe`
-  `npm install nodemon --save-dev`
+- `npm i bcryptjs multer clodinary dotenv mongoose cors cookie-parser jsonwebtoken stripe`
+- `npm install nodemon --save-dev`
 
 ## STEP 2 - Create a Server :
 
