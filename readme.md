@@ -24,4 +24,4 @@
 
 ### STEP 3 - Folder Structure :
 
--
+- create folders to manage everything.
