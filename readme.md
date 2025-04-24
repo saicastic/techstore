@@ -15,6 +15,7 @@
 - Now we will download all the dependencies and devdependencies which are required for our project.
 - `npm i bcryptjs multer cloudinary dotenv mongoose cors cookie-parser jsonwebtoken stripe`
 - `npm install nodemon --save-dev`
+- nodemon is added as devdependencies
 
 ### STEP 2 - Create a Server :
 
