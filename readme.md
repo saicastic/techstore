@@ -18,7 +18,7 @@
 
 ### STEP 2 - Create a Server :
 
--
+- So now we will create a server in 'server.js' file.
 
 ### STEP 3 - Folder Structure :
 
