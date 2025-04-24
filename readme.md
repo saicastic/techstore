@@ -19,6 +19,7 @@
 ### STEP 2 - Create a Server :
 
 - So now we will create a server in 'server.js' file.
+- We will create a server in this file using 'express'.
 
 ### STEP 3 - Folder Structure :
 
