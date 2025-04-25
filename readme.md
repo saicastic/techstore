@@ -33,6 +33,7 @@
 - nodemon is added as devdependencies
 - **cors** : used to connect front-end and back-end
 - **stripe** : payment gateway provider
+- **mongoose** : driver for mongodb
 
 ### STEP 2 - Create a Server :
 
