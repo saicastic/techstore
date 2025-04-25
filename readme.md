@@ -11,6 +11,7 @@
 - assets - contains all the assets
 - components - components folder
 - context - contains global context
+- pages - contains each page like (home, products etc)
 
 # BACKEND :
 
