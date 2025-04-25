@@ -32,6 +32,7 @@
 - `npm install nodemon --save-dev`
 - nodemon is added as devdependencies
 - **cors** : used to connect front-end and back-end
+- **stripe** : payment gateway provider
 
 ### STEP 2 - Create a Server :
 
