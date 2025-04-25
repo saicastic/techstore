@@ -10,6 +10,7 @@
 - src > (assets, components, context, pages)
 - assets - contains all the assets
 - components - components folder
+- context - contains global context
 
 # BACKEND :
 
