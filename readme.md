@@ -1,5 +1,9 @@
 # FRONTEND :
 
+### BASE STEP
+
+- We will crete a folder called 'client' so that our front end and backend are seperated.
+
 # BACKEND :
 
 ### BASE STEP :
