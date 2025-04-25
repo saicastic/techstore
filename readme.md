@@ -7,6 +7,8 @@
 
 ### FOLDER STRUCTURE :
 
+- src > (assets, components, context, pages)
+
 # BACKEND :
 
 ### BASE STEP :
