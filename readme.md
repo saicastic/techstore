@@ -13,6 +13,8 @@
 - **context** - contains global context
 - **pages** - contains each page like (home, products etc)
 
+### STEP 1 :
+
 # BACKEND :
 
 ### BASE STEP :
