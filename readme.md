@@ -31,6 +31,7 @@
 - `npm i bcryptjs multer cloudinary dotenv mongoose cors cookie-parser jsonwebtoken stripe`
 - `npm install nodemon --save-dev`
 - nodemon is added as devdependencies
+- **cors** : used to connect front-end and back-end
 
 ### STEP 2 - Create a Server :
 
