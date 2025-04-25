@@ -7,7 +7,7 @@
 
 ### FOLDER STRUCTURE :
 
-- src > (assets, components, context, pages)
+- src -> (assets, components, context, pages)
 - **assets** - contains all the assets
 - **components** - components folder
 - **context** - contains global context
