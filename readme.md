@@ -1,9 +1,11 @@
 # FRONTEND :
 
-### BASE STEP
+### BASE STEP :
 
 - We will crete a folder called 'client' so that our front end and backend are seperated.
 - We have to first run 'creat-react-app' command to create a react app in our 'client' folder.
+
+### FOLDER STRUCTURE :
 
 # BACKEND :
 
