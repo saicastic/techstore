@@ -35,10 +35,11 @@
   ```
 - `npm install nodemon --save-dev`
 - nodemon is added as devdependencies
+- **bcryptjs** : used for password hashing
 - **cors** : used to connect front-end and back-end
 - **stripe** : payment gateway provider
 - **mongoose** : driver for mongodb
-- **nodemon** : used to run server in watch mode and does server hot reloading on saving
+- **nodemon** : used to run server in watch mode and does server hot reloading on saving.
 
 ### STEP 2 - Create a Server :
 
