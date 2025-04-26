@@ -38,6 +38,7 @@
 - **bcryptjs** : used for password hashing
 - **multer** : used for file upload handling
 - **cloudinary** : used for cloud-based image/video management
+- **dotenv** : used for environment configuration
 - **cors** : used to connect front-end and back-end
 - **stripe** : payment gateway provider
 - **mongoose** : driver for mongodb
