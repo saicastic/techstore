@@ -1,6 +1,6 @@
 # TechStore :
 
-# FRONTEND :
+# FRONTEND ( client folder ) :
 
 ### BASE STEP :
 
@@ -17,7 +17,7 @@
 
 ### STEP 1 :
 
-# BACKEND :
+# BACKEND ( server folder ) :
 
 ### BASE STEP :
 
