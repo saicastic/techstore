@@ -41,6 +41,7 @@
 - **dotenv** : used for environment configuration
 - **mongoose** : driver for mongodb
 - **cors** : used to connect front-end and back-end
+- **cookie-parser** : used for cookie handling
 - **stripe** : payment gateway provider
 - **nodemon** : used to run server in watch mode and does server hot reloading on saving.
 
