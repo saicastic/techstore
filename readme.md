@@ -36,6 +36,7 @@
 - `npm install nodemon --save-dev`
 - nodemon is added as devdependencies
 - **bcryptjs** : used for password hashing
+- **multer** : used for file upload handling
 - **cors** : used to connect front-end and back-end
 - **stripe** : payment gateway provider
 - **mongoose** : driver for mongodb
