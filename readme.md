@@ -40,8 +40,8 @@
 - **cloudinary** : used for cloud-based image/video management
 - **dotenv** : used for environment configuration
 - **cors** : used to connect front-end and back-end
-- **stripe** : payment gateway provider
 - **mongoose** : driver for mongodb
+- **stripe** : payment gateway provider
 - **nodemon** : used to run server in watch mode and does server hot reloading on saving.
 
 ### STEP 2 - Create a Server :
