@@ -53,6 +53,7 @@
 - So now we will create a server in 'server.js' file.
 - We will create a server in this file using 'express'.
 - and also use middlewares to add cors and cooki-parser.
+- **middlewares** : code that runs before any api call
 
 ### STEP 3 - Folder Structure :
 
