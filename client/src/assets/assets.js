@@ -705,7 +705,7 @@ export const dummyProducts = [
     category: "Instant",
 
     price: 55,
-    offerPrice: 50,
+    offerPrice: 5,
     image: [maggi_image],
     description: [
       "Instant and easy to cook",
