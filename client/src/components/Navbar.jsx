@@ -48,16 +48,16 @@ const Navbar = () => {
           <img src={assets.search_icon} alt="search" className="w-4 h-4" />
         </div>
 
-        <div className="relative cursor-pointer">
+        <div
+          className="relative cursor-pointer"
+          onClick={() => navigate("/cart")}
+        >
           <img
             src={assets.nav_cart_icon}
             alt="cart_icon"
             className="w-4 opacity-60"
           />
-          <button
-            onClick={() => navigate("/cart")}
-            className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full"
-          >
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">
             {getCartCount()}
           </button>
         </div>
@@ -88,17 +88,17 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className="flex items-center gap-6 sm:hidden">
+      <div
+        onClick={() => navigate("/cart")}
+        className="flex items-center gap-6 sm:hidden"
+      >
         <div className="relative cursor-pointer">
           <img
             src={assets.nav_cart_icon}
             alt="cart_icon"
             className="w-4 opacity-60"
           />
-          <button
-            onClick={() => navigate("/cart")}
-            className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full"
-          >
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">
             {getCartCount()}
           </button>
         </div>
