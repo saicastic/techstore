@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 
@@ -78,7 +78,7 @@ const Navbar = () => {
             />
             <ul className="hidden group-hover:block absolute top-10 right-0 bg-white shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40">
               <li className="p-1.5 pl-3 hover:bg-primary/10 cursor-pointer">
-                My Orders
+                <Link to="/my-orders">My Orders</Link>
               </li>
               <li className="p-1.5 pl-3 hover:bg-primary/10 cursor-pointer">
                 Logout
