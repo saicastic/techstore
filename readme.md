@@ -43,6 +43,7 @@
 - **dotenv** : used for environment configuration
 - **mongoose** : driver for mongodb
 - **cors** : used to connect front-end and back-end (as our front end and backend will be on different ports, cors will help to connect them)
+- **cors full form** : Cross - Origin Resource Sharing
 - **cookie-parser** : used for cookie handling, Cookie header and populate `req.cookies`
 - **jsonwebtoken** : used for authentication tokens
 - **stripe** : payment gateway provider
