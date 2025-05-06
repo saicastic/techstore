@@ -1,8 +1,7 @@
+import Order from "../models/Order.js";
+import Product from "../models/Product.js";
+
 // Place Order COD: /api/order/cod
-
-import Order from "../models/Order";
-import Product from "../models/Product";
-
 export const placeOrderCOD = async (req, res) => {
   try {
     const { userId, items, address } = req.body;
@@ -28,5 +27,41 @@ export const placeOrderCOD = async (req, res) => {
     });
   } catch (error) {
     return res.json({ success: false, message: error.message });
+  }
+};
+
+// get Orders By User Id : /api/order/user
+
+export const getUserOrders = async (req, res) => {
+  try {
+    const { userId } = req.body;
+    const orders = await Order.find({
+      userId,
+      $or: [{ paymentType: "COD" }, { isPaid: true }],
+    })
+      .populate("items.product address")
+      .sort({ createdAt: -1 });
+
+    res.json({ success: true, orders });
+  } catch (err) {
+    console.log(err.message);
+    return res.json({ success: true, message: err.message });
+  }
+};
+
+//Get All Orders (for seller/admin) : /api/order/seller
+
+export const getAllOrders = async (req, res) => {
+  try {
+    const orders = await Order.find({
+      $or: [{ paymentType: "COD" }, { isPaid: true }],
+    })
+      .populate("items.product address")
+      .sort({ createdAt: -1 });
+
+    res.json({ success: true, orders });
+  } catch (err) {
+    console.log(err.message);
+    return res.json({ success: true, message: err.message });
   }
 };
