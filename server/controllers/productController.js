@@ -22,7 +22,7 @@ export const addProduct = async (req, res) => {
     res.json({ success: true, message: "product added" });
   } catch (error) {
     console.log(error.message);
-    return res.json({ success: false, message: error.message });
+    res.json({ success: false, message: error.message });
   }
 };
 
