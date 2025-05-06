@@ -6,7 +6,6 @@ import {
   register,
 } from "../controllers/userController.js";
 import authUser from "../middlewares/authUser.js";
-import "dotenv/config";
 
 const userRouter = express.Router();
 
