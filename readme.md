@@ -66,3 +66,5 @@
 ## Connecting Front-end and Backend
 
 ## Deployment :
+
+- Deploy front-end and back-end differently and connect them.
