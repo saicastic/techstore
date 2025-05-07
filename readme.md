@@ -63,6 +63,7 @@
 - **configs** : this folder includes configurations for cloudinary, database (mongoDB) and multer.
 - **controllers** : this folder includes files which have functions to handle requests from client.
 - **middlewares** : this folder include files which have functions which are meant to be run before any other contoller function.
+- **models** : this folder include files which have models (tables) for our DB.
 
 ### STEP 4 - making restful apis :
 
