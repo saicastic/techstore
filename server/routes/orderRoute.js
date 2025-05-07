@@ -7,7 +7,7 @@ import {
   getUserOrders,
   placeOrderCOD,
   placeOrderStripe,
-} from "../controllers/orderContoller.js";
+} from "../controllers/orderController.js";
 
 const orderRouter = express.Router();
 
