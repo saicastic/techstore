@@ -9,7 +9,7 @@
 
 ### FOLDER STRUCTURE :
 
-- src -> (assets, components, context, pages)
+- src -> (assets, components -> seller , context, pages -> seller)
 - **assets** - contains all the assets
 - **components** - components folder
 - **context** - contains global context
