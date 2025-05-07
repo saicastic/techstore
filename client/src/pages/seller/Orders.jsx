@@ -11,7 +11,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       const { data } = await axios.get("/api/order/seller");
-      if (data.success && data.orders.length == 0) {
+      if (data.success) {
         setOrders(data.orders);
       } else {
         toast.error(data.message);
