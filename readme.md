@@ -60,3 +60,5 @@
 
 - create folders to manage everything.
 - ( configs, controllers, middlewares, models, routes)
+
+### STEP 4 - making restful apis :
