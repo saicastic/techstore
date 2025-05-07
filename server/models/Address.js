@@ -13,7 +13,8 @@ const addressSchema = new mongoose.Schema({
   phone: { type: String, required: true },
 });
 
+// Correct model definition
 const Address =
-  mongoose.models.address || mongoose.model("address", addressSchema);
+  mongoose.models.address || mongoose.model("address", addressSchema); // Use mongoose.model() NOT mongoose.Model
 
 export default Address;
