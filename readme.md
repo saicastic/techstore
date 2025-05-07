@@ -60,7 +60,8 @@
 
 - create folders to manage everything.
 - ( configs, controllers, middlewares, models, routes)
-- **configs** : this file includes configurations for cloudinary, database (mongoDB) and multer.
+- **configs** : this folder includes configurations for cloudinary, database (mongoDB) and multer.
+- **controllers** : this folder includes files which have functions to handle requests from client.
 
 ### STEP 4 - making restful apis :
 
