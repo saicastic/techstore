@@ -68,14 +68,14 @@ const AddAdress = () => {
               <InputField
                 handleChange={handleChange}
                 address={address}
-                name="firstname"
+                name="firstName"
                 type="text"
                 placeholder="first name"
               />
               <InputField
                 handleChange={handleChange}
                 address={address}
-                name="lastname"
+                name="lastName"
                 type="text"
                 placeholder="last name"
               />
