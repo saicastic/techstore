@@ -25,13 +25,8 @@ import main_banner_bg_sm from "./main_banner_bg_sm.png";
 import bottom_banner_image from "./bottom_banner_image.png";
 import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
 import add_address_iamge from "./add_address_image.svg";
-import organic_vegitable_image from "./organic_vegitable_image.png";
-import fresh_fruits_image from "./fresh_fruits_image.png";
-import bottles_image from "./bottles_image.png";
+
 import maggi_image from "./maggi_image.png";
-import dairy_product_image from "./dairy_product_image.png";
-import bakery_image from "./bakery_image.png";
-import grain_image from "./grain_image.png";
 import potato_image_1 from "./potato_image_1.png";
 import potato_image_2 from "./potato_image_2.png";
 import potato_image_3 from "./potato_image_3.png";
@@ -69,9 +64,20 @@ import vanilla_muffins_image from "./vanilla_muffins_image.png";
 import quinoa_image from "./quinoa_image.png";
 import brown_rice_image from "./brown_rice_image.png";
 import barley_image from "./barley_image.png";
+import laptop_image from "./laptop.png";
+import headphone_image from "./headphone.png";
+import cpu_image from "./cpu.png";
+import smartwatch_image from "./smartwatch.png";
+import gamingchair_image from "./gamingchair.png";
+import keyboard_image from "./keyboard.png";
 
 export const assets = {
   logo,
+  headphone_image,
+  smartwatch_image,
+  gamingchair_image,
+  keyboard_image,
+  cpu_image,
   search_icon,
   remove_icon,
   arrow_right_icon_colored,
@@ -98,53 +104,49 @@ export const assets = {
   bottom_banner_image_sm,
   add_address_iamge,
   box_icon,
+  laptop_image,
 };
 
-export const categories = [
+export const techCategories = [
   {
-    text: "Organic veggies",
-    path: "Vegetables",
-    image: organic_vegitable_image,
-    bgColor: "#FEF6DA",
+    text: "Laptops & Computers",
+    path: "laptops-computers",
+    image: laptop_image,
+    bgColor: "#E0F4FF",
   },
   {
-    text: "Fresh Fruits",
-    path: "Fruits",
-    image: fresh_fruits_image,
-    bgColor: "#FEE0E0",
+    text: "PC Components",
+    path: "pc-components",
+    image: cpu_image, // Use a CPU/motherboard image
+    bgColor: "#EDE7F6", // Light purple
+  },
+
+  {
+    text: "Audio & Headphones",
+    path: "audio",
+    image: headphone_image,
+    bgColor: "#E0FFE8",
   },
   {
-    text: "Cold Drinks",
-    path: "Drinks",
-    image: bottles_image,
-    bgColor: "#F0F5DE",
+    text: "Gaming Gear",
+    path: "gaming",
+    image: gamingchair_image,
+    bgColor: "#FFF3E0",
+  },
+
+  {
+    text: "Wearable Tech",
+    path: "wearables",
+    image: smartwatch_image,
+    bgColor: "#FFE0E9",
   },
   {
-    text: "Instant Food",
-    path: "Instant",
-    image: maggi_image,
-    bgColor: "#E1F5EC",
-  },
-  {
-    text: "Dairy Products",
-    path: "Dairy",
-    image: dairy_product_image,
-    bgColor: "#FEE6CD",
-  },
-  {
-    text: "Bakery & Breads",
-    path: "Bakery",
-    image: bakery_image,
-    bgColor: "#E0F6FE",
-  },
-  {
-    text: "Grains & Cereals",
-    path: "Grains",
-    image: grain_image,
-    bgColor: "#F1E3F9",
+    text: "PC Accessories",
+    path: "accessories",
+    image: keyboard_image,
+    bgColor: "#E0F7FA",
   },
 ];
-
 export const footerLinks = [
   {
     title: "Quick Links",
