@@ -107,7 +107,7 @@ export const assets = {
   laptop_image,
 };
 
-export const techCategories = [
+export const Categories = [
   {
     text: "Laptops & Computers",
     path: "laptops-computers",
