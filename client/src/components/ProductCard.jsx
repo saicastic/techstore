@@ -1,93 +1,92 @@
-import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
 import { useAppContext } from "../context/AppContext";
 
 const ProductCard = ({ product }) => {
   const { currency, addToCart, removeFromCart, cartItems, navigate } =
     useAppContext();
 
+  if (!product) return null;
+
+  const inCart = cartItems[product._id];
+
   return (
-    product && (
-      <div
-        onClick={() => {
-          navigate(
-            `/products/${product.category.toLowerCase()}/${product._id}`
-          );
-          scrollTo(0, 0);
-        }}
-        className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full"
-      >
-        <div className="group cursor-pointer flex items-center justify-center px-2">
-          <img
-            className="group-hover:scale-105 transition max-w-26 md:max-w-36"
-            src={product.image[0]}
-            alt={product.name}
-          />
-        </div>
-        <div className="text-gray-500/60 text-sm">
-          <p>{product.category}</p>
-          <p className="text-gray-700 font-medium text-lg truncate w-full">
-            {product.name}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+      onClick={() => {
+        navigate(`/products/${product.category.toLowerCase()}/${product._id}`);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+      className="group bg-white rounded-lg border border-gray-150 cursor-pointer overflow-hidden hover:border-gray-300 transition-colors duration-200"
+    >
+      {/* Compact Image Container */}
+      <div className="aspect-square flex items-center justify-center bg-gray-50  overflow-hidden">
+        <img
+          src={product.image[0]}
+          alt={product.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Content Area */}
+      <div className="p-3">
+        <div>
+          <p className="text-[11px] font-medium uppercase tracking-wide text-gray-500 mb-1">
+            {product.category}
           </p>
-          <div className="flex items-center gap-0.5">
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <img
-                  key={i}
-                  src={i < 4 ? assets.star_icon : assets.star_dull_icon}
-                  alt=""
-                  className="md:w-3.5 w-3"
-                />
-              ))}
-            <p>(4)</p>
-          </div>
-          <div className="flex items-end justify-between mt-3">
-            <p className="md:text-xl text-base font-medium text-primary">
-              {currency} {product.offerPrice}{" "}
-              <span className="text-gray-500/60 md:text-sm text-xs line-through">
-                {currency} {product.price}
-              </span>
+          <h3 className="text-[14px] font-semibold text-gray-900 leading-tight">
+            {product.name}
+          </h3>
+        </div>
+
+        {/* Price + CTA */}
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[16px] font-bold text-gray-900">
+              {currency} {product.offerPrice}
             </p>
-            <div
-              className="text-primary"
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-            >
-              {!cartItems[product._id] ? (
+            {product.offerPrice < product.price && (
+              <p className="text-[12px] text-gray-400 line-through mt-0.5">
+                {currency} {product.price}
+              </p>
+            )}
+          </div>
+
+          <div onClick={(e) => e.stopPropagation()}>
+            {!inCart ? (
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => addToCart(product._id)}
+                className="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-[13px] rounded-md shadow-sm"
+              >
+                Add to Cart
+              </motion.button>
+            ) : (
+              <div className="flex items-center gap-2.5 bg-gray-100 px-2.5 py-1 rounded-md">
                 <button
-                  className="flex items-center justify-center gap-1 bg-primary/10 border border-primary/40 md:w-[80px] w-[64px] h-[34px] rounded cursor-pointer"
-                  onClick={() => addToCart(product._id)}
+                  onClick={() => removeFromCart(product._id)}
+                  className="text-gray-600 hover:text-gray-900 font-medium text-[15px] w-5"
                 >
-                  <img src={assets.cart_icon} alt="cart-icon" />
-                  Add
+                  -
                 </button>
-              ) : (
-                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-indigo-500/25 rounded select-none">
-                  <button
-                    onClick={() => {
-                      removeFromCart(product._id);
-                    }}
-                    className="cursor-pointer text-md px-2 h-full"
-                  >
-                    -
-                  </button>
-                  <span className="w-5 text-center">
-                    {cartItems[product._id]}
-                  </span>
-                  <button
-                    onClick={() => addToCart(product._id)}
-                    className="cursor-pointer text-md px-2 h-full"
-                  >
-                    +
-                  </button>
-                </div>
-              )}
-            </div>
+                <span className="text-[13px] font-medium min-w-[20px] text-center">
+                  {inCart}
+                </span>
+                <button
+                  onClick={() => addToCart(product._id)}
+                  className="text-gray-600 hover:text-gray-900 font-medium text-[15px] w-5"
+                >
+                  +
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
-    )
+    </motion.div>
   );
 };
 
