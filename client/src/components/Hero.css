@@ -1,0 +1,108 @@
+/* Hero.css */
+:root {
+  --color-primary: #b388eb;
+  --color-primary-dull: #fdc5f5;
+}
+
+.hero {
+  @apply relative min-h-screen flex items-center overflow-hidden;
+  padding: 4rem 2rem;
+}
+
+.hero__gradient {
+  @apply absolute inset-0;
+  z-index: -1;
+}
+
+.hero__content {
+  @apply container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12;
+}
+
+.hero__text-group {
+  @apply lg:max-w-[50%] text-center lg:text-left;
+}
+
+.hero__title {
+  @apply text-5xl md:text-7xl font-bold mb-6;
+  line-height: 1.1;
+}
+
+.hero__highlight {
+  @apply block mt-4;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-dull) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitle {
+  @apply text-xl md:text-2xl text-gray-300 mb-8;
+}
+
+.hero__cta {
+  @apply flex flex-col sm:flex-row gap-4 justify-center lg:justify-start;
+}
+
+.hero__btn {
+  @apply px-8 py-4 rounded-lg font-semibold transition-all duration-300;
+}
+
+.hero__btn--primary {
+  @apply bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dull)] text-white;
+  box-shadow: 0 4px 24px -4px rgba(179, 136, 235, 0.4);
+}
+
+.hero__btn--secondary {
+  @apply border-2 border-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/10;
+}
+
+.hero__image-container {
+  @apply relative w-full max-w-2xl;
+}
+
+.hero__image {
+  @apply relative z-10 w-full h-auto object-contain;
+  filter: drop-shadow(0 16px 40px rgba(253, 197, 245, 0.3));
+}
+
+.hero__image-glow {
+  @apply absolute inset-0 bg-[var(--color-primary-dull)] blur-3xl;
+}
+
+.hero__deco-circle {
+  @apply absolute w-64 h-64 border-2 border-[var(--color-primary)] rounded-full;
+  top: 20%;
+  left: 10%;
+  opacity: 0.1;
+}
+
+.hero__deco-blob {
+  @apply absolute w-96 h-96 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dull)] opacity-10;
+  right: -10%;
+  bottom: -10%;
+  filter: blur(80px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero__content {
+    @apply flex-col text-center;
+  }
+
+  .hero__title {
+    @apply text-4xl md:text-6xl;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__title {
+    @apply text-3xl;
+  }
+
+  .hero__subtitle {
+    @apply text-lg;
+  }
+}
