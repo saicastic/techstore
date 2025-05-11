@@ -1,155 +1,59 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import "./Hero.css"; // Create this CSS file
+import { ShoppingCart } from "lucide-react";
 
-const MainBanner = () => {
-  const constraintsRef = useRef(null);
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
-
-  const textVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 120 },
-    },
-  };
-
-  const imageVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: { type: "spring", damping: 15, stiffness: 100 },
-    },
-  };
-
+export default function MainBanner() {
   return (
-    <motion.section
-      className="hero"
-      initial="hidden"
-      animate="visible"
-      ref={constraintsRef}
-    >
-      {/* Animated gradient background */}
-      <motion.div
-        className="hero__gradient"
-        animate={{
-          background: [
-            `linear-gradient(45deg, var(--color-primary) 0%, var(--color-primary-dull) 50%, var(--color-primary) 100%)`,
-            `linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dull) 50%, var(--color-primary) 100%)`,
-          ],
-        }}
-        transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
-      />
+    <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-white overflow-hidden flex items-center justify-center p-6">
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=1500&q=80"
+          alt="Tech store background"
+          className="w-full h-full object-cover opacity-30"
+        />
+      </div>
 
-      <div className="hero__content">
-        {/* Text group */}
-        <motion.div className="hero__text-group" variants={containerVariants}>
-          <motion.h1 className="hero__title" variants={textVariants}>
-            <motion.span
-              animate={{
-                background: [
-                  `linear-gradient(to right, var(--color-primary) 0%, var(--color-primary-dull) 100%)`,
-                  `linear-gradient(to right, var(--color-primary-dull) 0%, var(--color-primary) 100%)`,
-                ],
-              }}
-              transition={{ duration: 4, repeat: Infinity }}
-            >
-              Next-Gen Tech
-            </motion.span>
-            <motion.span className="hero__highlight" variants={textVariants}>
-              Reimagined
-            </motion.span>
-          </motion.h1>
+      <div className="relative z-10 max-w-4xl text-center space-y-6">
+        <motion.h1
+          className="text-5xl md:text-6xl font-bold text-gray-900"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Discover the Future of Tech
+        </motion.h1>
 
-          <motion.p className="hero__subtitle" variants={textVariants}>
-            Experience Tomorrow's Technology Today
-          </motion.p>
+        <motion.p
+          className="text-lg md:text-xl text-gray-700"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          Explore the latest gadgets, gear, and electronics at unbeatable
+          prices.
+        </motion.p>
 
-          <motion.div className="hero__cta" variants={textVariants}>
-            <motion.button
-              className="hero__btn hero__btn--primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Shop Now
-            </motion.button>
-            <motion.button
-              className="hero__btn hero__btn--secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore
-            </motion.button>
-          </motion.div>
-        </motion.div>
-
-        {/* Product image */}
-        <motion.div className="hero__image-container" variants={imageVariants}>
-          <motion.img
-            src="/tech-product.png"
-            alt="Tech Product"
-            className="hero__image"
-            animate={{
-              y: [-10, 10, -10],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <motion.div
-            className="hero__image-glow"
-            animate={{
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-            }}
-          />
+        <motion.div
+          className="flex justify-center gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          <button className="text-lg px-6 py-3 rounded-2xl shadow-lg bg-blue-600 text-white flex items-center hover:bg-blue-700 transition">
+            Shop Now
+            <ShoppingCart className="ml-2" />
+          </button>
         </motion.div>
       </div>
 
-      {/* Decorative elements */}
-      <motion.div
-        className="hero__deco-circle"
-        animate={{
-          rotate: 360,
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+      <motion.img
+        src="https://images.unsplash.com/photo-1606813904661-1cb59e1f4bb6?auto=format&fit=crop&w=800&q=80"
+        alt="Gadget showcase"
+        className="hidden md:block absolute bottom-0 right-0 w-64 rounded-tl-2xl shadow-2xl"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.9, duration: 0.8 }}
       />
-
-      <motion.div
-        className="hero__deco-blob"
-        animate={{
-          borderRadius: ["40% 60% 60% 40%", "50% 50% 60% 40%"],
-          rotate: [0, 180],
-          scale: [1, 1.2],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-      />
-    </motion.section>
+    </section>
   );
-};
-
-export default MainBanner;
+}
