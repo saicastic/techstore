@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import "./Hero.css"; // Create this CSS file
 
-const Hero = () => {
+const MainBanner = () => {
   const constraintsRef = useRef(null);
 
   // Animation variants
@@ -152,4 +152,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default MainBanner;
