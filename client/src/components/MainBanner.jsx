@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
+import { assets } from "../assets/assets";
 
 export default function MainBanner() {
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-white overflow-hidden flex items-center justify-center p-6">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=1500&q=80"
+          src={assets.home_banner}
           alt="Tech store background"
           className="w-full h-full object-cover opacity-30"
         />
@@ -47,7 +48,7 @@ export default function MainBanner() {
       </div>
 
       <motion.img
-        src="https://images.unsplash.com/photo-1606813904661-1cb59e1f4bb6?auto=format&fit=crop&w=800&q=80"
+        src={assets.cpu_image}
         alt="Gadget showcase"
         className="hidden md:block absolute bottom-0 right-0 w-64 rounded-tl-2xl shadow-2xl"
         initial={{ opacity: 0, x: 100 }}
