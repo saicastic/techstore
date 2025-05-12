@@ -164,9 +164,3 @@ export const features = [
     description: "Loved by 10,000+ happy customers.",
   },
 ];
-
-
-
-
-
-

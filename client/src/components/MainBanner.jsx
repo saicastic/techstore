@@ -6,17 +6,17 @@ import { assets } from "../assets/assets";
 export default function MainBanner() {
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-white overflow-hidden flex items-center justify-center p-6">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 rounded-xl overflow-hidden">
         <img
           src={assets.home_banner}
           alt="Tech store background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
         />
       </div>
 
       <div className="relative z-10 max-w-4xl text-center space-y-6">
         <motion.h1
-          className="text-5xl md:text-6xl font-bold text-gray-900"
+          className="text-5xl md:text-6xl font-bold text-white"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -25,7 +25,7 @@ export default function MainBanner() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-700"
+          className="text-lg md:text-xl text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
