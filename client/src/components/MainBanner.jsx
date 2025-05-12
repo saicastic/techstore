@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { assets } from "../assets/assets";
+import { useAppContext } from "../context/AppContext";
 
 export default function MainBanner() {
+  const { navigate } = useAppContext();
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-white overflow-hidden flex items-center justify-center p-6">
       <div className="absolute inset-0 rounded-xl overflow-hidden">
@@ -40,7 +42,10 @@ export default function MainBanner() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <button className="text-lg px-6 py-3 rounded-lg shadow-lg bg-blue-600 text-white flex items-center hover:bg-blue-700 transition">
+          <button
+            onClick={() => navigate("/products")}
+            className="text-lg px-6 py-3 rounded-md shadow-lg cursor-pointer bg-primary  text-white flex items-center hover:bg-primary-dull transition"
+          >
             Shop Now
             <ShoppingCart className="ml-2" />
           </button>
