@@ -114,7 +114,7 @@ const ProductDetails = () => {
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <button
               onClick={() => addToCart(product._id)}
-              className="flex-1 py-3 px-6 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-medium"
+              className="flex-1 py-3 px-6 bg-primary cursor-pointer text-white rounded-lg hover:bg-primary-dark transition-colors font-medium"
             >
               Add to Cart
             </button>
