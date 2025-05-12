@@ -16,7 +16,7 @@ const BestSeller = () => {
         {/* Optional View All link */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="hidden md:block text-sm font-medium text-primary hover:underline"
+          className="hidden md:block text-sm md:text-md lg:text-lg font-medium text-primary hover:underline cursor-pointer"
         >
           View All
         </button>

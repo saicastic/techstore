@@ -85,7 +85,7 @@ export const categories = [
   },
 
   {
-    text: "Audio & Headphones",
+    text: "Headphones",
     path: "audio",
     image: headphone_image,
     bgColor: "#E0FFE8",
