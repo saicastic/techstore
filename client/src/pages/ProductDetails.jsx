@@ -123,7 +123,7 @@ const ProductDetails = () => {
                 addToCart(product._id);
                 navigate("/cart");
               }}
-              className="flex-1 py-3 px-6 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+              className="flex-1 py-3 px-6 bg-gray-900 cursor-pointer text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
             >
               Buy Now
             </button>
