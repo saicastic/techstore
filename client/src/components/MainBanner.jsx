@@ -40,7 +40,7 @@ export default function MainBanner() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <button className="text-lg px-6 py-3 rounded-2xl shadow-lg bg-blue-600 text-white flex items-center hover:bg-blue-700 transition">
+          <button className="text-lg px-6 py-3 rounded-lg shadow-lg bg-blue-600 text-white flex items-center hover:bg-blue-700 transition">
             Shop Now
             <ShoppingCart className="ml-2" />
           </button>
