@@ -65,7 +65,7 @@ const ProductCard = ({ product }) => {
                 Add to Cart
               </motion.button>
             ) : (
-              <div className="flex items-center gap-2.5 bg-gray-500 px-2.5 py-1 rounded-md">
+              <div className="flex items-center gap-2.5 bg-gray-300 px-2.5 py-1 rounded-md">
                 <button
                   onClick={() => removeFromCart(product._id)}
                   className="text-gray-600 hover:text-gray-900 font-medium text-[15px] w-5 cursor-pointer"
