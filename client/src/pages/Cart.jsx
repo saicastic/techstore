@@ -138,7 +138,7 @@ const Cart = () => {
                 className="cursor-pointer w-24 h-24 flex items-center justify-center border border-gray-300 rounded"
               >
                 <img
-                  className="max-w-full h-full object-cover"
+                  className="w-full max-w-full h-full object-cover"
                   src={product.image[0]}
                   alt={product.name}
                 />
@@ -295,7 +295,7 @@ const Cart = () => {
 
         <button
           onClick={placeOrder}
-          className="w-full py-3 mt-6 cursor-pointer bg-primary text-white font-medium hover:bg-primary-dull transition"
+          className="w-full rounded-md py-3 mt-6 cursor-pointer bg-primary text-white font-medium hover:bg-primary-dull transition"
         >
           {paymentOption === "COD" ? "Place Order " : "Proceed to Checkout"}
         </button>
