@@ -77,7 +77,7 @@ const ProductCard = ({ product }) => {
                 </span>
                 <button
                   onClick={() => addToCart(product._id)}
-                  className="text-gray-600 hover:text-gray-900 font-medium text-[15px] w-5"
+                  className="text-gray-600 hover:text-gray-900 font-medium text-[15px] w-5 cursor-pointer"
                 >
                   +
                 </button>
