@@ -154,7 +154,7 @@ const ProductDetails = () => {
               navigate("/products");
               window.scrollTo(0, 0);
             }}
-            className="px-8 py-2.5 text-primary border border-primary rounded-lg hover:bg-primary/10 transition-colors"
+            className="px-8 py-2.5 text-primary border border-primary rounded-lg cursor-pointer hover:bg-primary/10 transition-colors"
           >
             View All Products
           </button>
