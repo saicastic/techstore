@@ -58,7 +58,7 @@ const ProductDetails = () => {
               <button
                 key={index}
                 onClick={() => setThumbnail(image)}
-                className={`shrink-0 w-20 h-20 border rounded-lg overflow-hidden transition-all ${
+                className={`shrink-0 w-20 h-20 border rounded-lg overflow-hidden transition-all cursor-pointer ${
                   thumbnail === image
                     ? "border-2 border-primary"
                     : "border-gray-200"
@@ -73,7 +73,7 @@ const ProductDetails = () => {
             ))}
           </div>
 
-          <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
+          <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden ">
             <img
               src={thumbnail}
               alt={product.name}
