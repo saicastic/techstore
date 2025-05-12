@@ -60,7 +60,7 @@ const ProductCard = ({ product }) => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => addToCart(product._id)}
-                className="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-[13px] rounded-sm shadow-sm"
+                className="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-[13px] rounded-sm cursor-pointer shadow-sm"
               >
                 Add to Cart
               </motion.button>
