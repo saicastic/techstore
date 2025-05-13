@@ -56,5 +56,6 @@
     "xutility": "cpp",
     "iomanip": "cpp",
     "string": "cpp"
-  }
+  },
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
