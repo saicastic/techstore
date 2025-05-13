@@ -19,7 +19,8 @@
 
 - Install Axios for api calls. and set baseUrl in env variables.
 - also create a components folder to store all the components and a pages folder to save folder.
-- install react-router-dom for routing
+- install react-router-dom for routing.
+- install react-hot-toast and put "<Roaster/>" in app.
 
 ## BACKEND ( server folder ) :
 
