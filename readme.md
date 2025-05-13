@@ -17,6 +17,8 @@
 
 ### STEP 1 :
 
+- Install Axios for api calls. and set baseUrl in env variables
+
 ## BACKEND ( server folder ) :
 
 ### BASE STEP :
