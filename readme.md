@@ -18,7 +18,8 @@
 ### STEP 1 :
 
 - Install Axios for api calls. and set baseUrl in env variables.
-- also create a components folder to store all the components and a pages folder to save folder
+- also create a components folder to store all the components and a pages folder to save folder.
+- install react-router-dom for routing
 
 ## BACKEND ( server folder ) :
 
