@@ -60,9 +60,6 @@ const Navbar = () => {
       {/* Navbar container */}
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <NavLink to="/">
-          <img className="h-9" src={assets.logo} alt="Logo" />
-        </NavLink>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
