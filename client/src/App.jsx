@@ -1,32 +1,65 @@
-// frontend/src/App.js
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { DarkModeProvider } from "./context/DarkModeContext";
-import ScraperForm from "./components/ScraperForm";
-import ImageGrid from "./components/ImageGrid";
-import ThemeToggle from "./components/ThemeToggle";
+import React from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
+import { useAppContext } from "./context/AppContext";
+import Login from "./components/Login";
+import AllProducts from "./components/AllProducts";
+import ProductCategory from "./pages/ProductCategory";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
+import AddAdress from "./pages/AddAdress";
+import MyOrders from "./pages/MyOrders";
+import SellerLogin from "./components/seller/SellerLogin";
+import SellerLayout from "./pages/seller/SellerLayout";
+import AddProduct from "./pages/seller/AddProduct";
+import Orders from "./pages/seller/Orders";
+import ProductList from "./pages/seller/ProductList";
+import NotFound from "./pages/NotFound";
+import Loading from "./components/Loading";
 
 const App = () => {
+  const isSellerPath = useLocation().pathname.includes("seller");
+  const { showUserLogin, isSeller } = useAppContext();
+
   return (
-    <DarkModeProvider>
-      <Router>
-        <div className="min-h-screen transition-colors duration-300">
-          <ThemeToggle />
-          <div className="container mx-auto px-4 py-8">
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <ScraperForm />
-                    <ImageGrid />
-                  </>
-                }
-              />
-            </Routes>
-          </div>
-        </div>
-      </Router>
-    </DarkModeProvider>
+    <div className="text-default min-h-screen text-gray-700 bg-white">
+      {isSellerPath ? null : <Navbar />}
+      {showUserLogin ? <Login /> : null}
+      <Toaster />
+      <div
+        className={`${isSellerPath ? " " : "px-6 md:px-16 lg:px-24 xl:px-32"}`}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/products/:category" element={<ProductCategory />} />
+          <Route path="/products/:category/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/add-address" element={<AddAdress />} />
+          <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="/loader" element={<Loading />} />
+          <Route
+            path="/seller"
+            element={isSeller ? <SellerLayout /> : <SellerLogin />}
+          >
+            <Route index element={isSeller ? <AddProduct /> : null} />
+            <Route
+              path="/seller/product-list"
+              element={isSeller ? <ProductList /> : null}
+            />
+            <Route
+              path="/seller/orders"
+              element={isSeller ? <Orders /> : null}
+            />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      {!isSellerPath && <Footer />}
+    </div>
   );
 };
 

@@ -1,16 +1,27 @@
-import mongoose from "mongoose";
+import { DataTypes } from "sequelize";
 
-const userSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    nickname: { type: String, default: "" },
-    cartItems: { type: Object, default: {} },
-  },
-  { minimize: false }
-);
+const UserModel = (sequelize) => {
+  return sequelize.define(
+    "User",
+    {
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: true,
+        },
+      },
+      password_hash: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    },
+    {
+      timestamps: true,
+      underscored: true,
+    }
+  );
+};
 
-const User = mongoose.models.user || mongoose.model("user", userSchema);
-
-export default User;
+export default UserModel;

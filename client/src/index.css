@@ -1,18 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 @import "tailwindcss";
 
-body {
-  @apply dark:bg-gray-900 dark:text-gray-100;
+* {
+  font-family: "Outfit", sans-serif;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@theme {
+  --color-primary: #b388eb;
+  --color-primary-dull: #fdc5f5;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
