@@ -9,7 +9,10 @@ import "dotenv/config";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "https://techstore-frontend-pi.vercel.app/",
+  "http://localhost:5173",
+];
 
 // Middleware
 app.use(
