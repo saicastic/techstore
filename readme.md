@@ -76,5 +76,4 @@
 
 ## Deployment :
 
-- Deploy front-end and back-end differently and connect them
 - add deployed front-end link in **cors** allowedOrigins array .
