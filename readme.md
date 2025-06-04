@@ -5,9 +5,9 @@
 ### BASE STEP :
 
 - We will crete a folder called 'client' so that our front end and backend are seperated.
-- We have to first run `creat-react-app` command to create a react app in our 'client' folder.
+- We have to first run `create-react-app` command to create a react app in our 'client' folder.
 
-### FOLDER STRUCTURE :
+### FOLDER STRUCTURE :s
 
 - src -> (assets, components -> seller , context, pages -> seller)
 - **assets** - contains all the assets
