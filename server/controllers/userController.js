@@ -87,12 +87,30 @@ export const login = async (req, res) => {
 export const isAuth = async (req, res) => {
   try {
     const { userId } = req.body;
+
+    if (!userId) {
+      return res
+        .status(400)
+        .json({ success: false, message: "User ID is required" });
+    }
+
     const user = await User.findById(userId).select("-password");
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+    }
 
     return res.json({ success: true, user });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    console.error("isAuth error:", error);
+    if (error.name === "CastError") {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid user ID format" });
+    }
+    res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
 
