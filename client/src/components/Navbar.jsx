@@ -56,10 +56,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white border-b border-gray-200 px-6 md:px-16 lg:px-24 xl:px-32 py-4 shadow-sm relative z-50">
+    <nav className="bg-white sticky top-0 border-b border-gray-200 px-6 md:px-16 lg:px-24 xl:px-32 py-4 shadow-sm  z-50">
       {/* Navbar container */}
       <div className="flex justify-between items-center">
         {/* Logo */}
+        <Link to="/">
+          <img
+            src={assets.logo}
+            alt="logo"
+            className="cursor-pointer w-34 md:w-38"
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
